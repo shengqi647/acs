@@ -1,0 +1,17 @@
+current.vms
+logs/*.log
+benchmark-logs/benchmark.log
+dump.log
+**/__pycache__
+**/*.pyc
+data/
+*.out
+**/.DS_Store
+tests/.pytest.log
+.dockerignore
+data/
+aws/aws-config.json
+.pytest_cache
+.benchmarks
+.flake8
+.coveragerc
