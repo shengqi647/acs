@@ -64,17 +64,20 @@ RUN python -m virtualenv ${PYTHON_LIBRARY_PATH}
 # Install pip dependencies here that are absolutely required by setup.py for 
 # better cache performance. These should be changed rarely, as they cause
 # long rebuild times.
+# Versions are pinned to keep this image reproducible. In particular,
+# gmpy2 must stay <2.2 because newer releases require GMP >= 6.3, while the
+# python:3.7.13-slim base image (Debian bullseye) ships GMP 6.2.1.
 RUN pip install \
-    cffi \
-    Cython \
-    gmpy2 \
-    psutil \
-    pycrypto \
-    pyzmq \
-    zfec \
-    uvloop \
-    numpy \
-    reedsolo
+    cffi==1.15.1 \
+    Cython==0.29.36 \
+    gmpy2==2.1.5 \
+    psutil==5.9.8 \
+    pycrypto==2.6.1 \
+    pyzmq==25.1.2 \
+    zfec==1.5.7.4 \
+    uvloop==0.18.0 \
+    numpy==1.21.6 \
+    reedsolo==1.7.0
 
 # This is needed otherwise the build for the power sum solver will fail.
 # This is a known issue in the version of libflint-dev in apt.

@@ -1,0 +1,23 @@
+# Generated test artifacts (root-owned tempdirs)
+sharedata/
+out/
+logs/
+.benchmarks/
+.pytest_cache/
+
+# Python build/test cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+*.egg-info/
+
+# Git
+.git/
+.gitignore
+
+# Editor
+.vscode/
+.idea/
+
+# Docs build artifacts
+docs/_build/

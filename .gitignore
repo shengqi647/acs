@@ -8,7 +8,6 @@ data/
 *.out
 **/.DS_Store
 tests/.pytest.log
-.dockerignore
 data/
 aws/aws-config.json
 .pytest_cache
